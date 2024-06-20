@@ -40,17 +40,18 @@
             this.BtnDollarBuy = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TxtExchangeRate = new System.Windows.Forms.TextBox();
+            this.BtnSell2 = new System.Windows.Forms.Button();
+            this.BtnSell = new System.Windows.Forms.Button();
+            this.TxtReaminder = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.TxtSum = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.TxtAmount = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.TxtExchangeRate = new System.Windows.Forms.TextBox();
             this.BtnEuroBuy = new System.Windows.Forms.Button();
             this.BtnDollarSell = new System.Windows.Forms.Button();
             this.BtnEuroSell = new System.Windows.Forms.Button();
-            this.TxtSum = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.TxtReaminder = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.BtnSell = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -150,6 +151,7 @@
             this.BtnDollarBuy.TabIndex = 8;
             this.BtnDollarBuy.Text = "<>";
             this.BtnDollarBuy.UseVisualStyleBackColor = true;
+            this.BtnDollarBuy.Click += new System.EventHandler(this.BtnDollarBuy_Click);
             // 
             // label12
             // 
@@ -165,6 +167,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.BtnSell2);
             this.groupBox1.Controls.Add(this.BtnSell);
             this.groupBox1.Controls.Add(this.TxtReaminder);
             this.groupBox1.Controls.Add(this.label11);
@@ -180,75 +183,25 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
-            // TxtExchangeRate
+            // BtnSell2
             // 
-            this.TxtExchangeRate.Location = new System.Drawing.Point(136, 30);
-            this.TxtExchangeRate.Name = "TxtExchangeRate";
-            this.TxtExchangeRate.Size = new System.Drawing.Size(157, 27);
-            this.TxtExchangeRate.TabIndex = 10;
+            this.BtnSell2.Location = new System.Drawing.Point(331, 108);
+            this.BtnSell2.Name = "BtnSell2";
+            this.BtnSell2.Size = new System.Drawing.Size(168, 38);
+            this.BtnSell2.TabIndex = 17;
+            this.BtnSell2.Text = "How much can I get?";
+            this.BtnSell2.UseVisualStyleBackColor = true;
+            this.BtnSell2.Click += new System.EventHandler(this.BtnSell2_Click);
             // 
-            // TxtAmount
+            // BtnSell
             // 
-            this.TxtAmount.Location = new System.Drawing.Point(136, 74);
-            this.TxtAmount.Name = "TxtAmount";
-            this.TxtAmount.Size = new System.Drawing.Size(157, 27);
-            this.TxtAmount.TabIndex = 12;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(21, 82);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 19);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Amount:";
-            // 
-            // BtnEuroBuy
-            // 
-            this.BtnEuroBuy.Location = new System.Drawing.Point(301, 207);
-            this.BtnEuroBuy.Name = "BtnEuroBuy";
-            this.BtnEuroBuy.Size = new System.Drawing.Size(37, 25);
-            this.BtnEuroBuy.TabIndex = 11;
-            this.BtnEuroBuy.Text = "<>";
-            this.BtnEuroBuy.UseVisualStyleBackColor = true;
-            // 
-            // BtnDollarSell
-            // 
-            this.BtnDollarSell.Location = new System.Drawing.Point(301, 82);
-            this.BtnDollarSell.Name = "BtnDollarSell";
-            this.BtnDollarSell.Size = new System.Drawing.Size(37, 25);
-            this.BtnDollarSell.TabIndex = 13;
-            this.BtnDollarSell.Text = "<>";
-            this.BtnDollarSell.UseVisualStyleBackColor = true;
-            // 
-            // BtnEuroSell
-            // 
-            this.BtnEuroSell.Location = new System.Drawing.Point(301, 255);
-            this.BtnEuroSell.Name = "BtnEuroSell";
-            this.BtnEuroSell.Size = new System.Drawing.Size(37, 27);
-            this.BtnEuroSell.TabIndex = 14;
-            this.BtnEuroSell.Text = "<>";
-            this.BtnEuroSell.UseVisualStyleBackColor = true;
-            // 
-            // TxtSum
-            // 
-            this.TxtSum.Location = new System.Drawing.Point(136, 119);
-            this.TxtSum.Name = "TxtSum";
-            this.TxtSum.Size = new System.Drawing.Size(157, 27);
-            this.TxtSum.TabIndex = 14;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(21, 127);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 19);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Sum:";
+            this.BtnSell.Location = new System.Drawing.Point(331, 30);
+            this.BtnSell.Name = "BtnSell";
+            this.BtnSell.Size = new System.Drawing.Size(168, 38);
+            this.BtnSell.TabIndex = 15;
+            this.BtnSell.Text = "Calculate";
+            this.BtnSell.UseVisualStyleBackColor = true;
+            this.BtnSell.Click += new System.EventHandler(this.BtnSell_Click);
             // 
             // TxtReaminder
             // 
@@ -268,14 +221,78 @@
             this.label11.TabIndex = 15;
             this.label11.Text = "Remainder";
             // 
-            // BtnSell
+            // TxtSum
             // 
-            this.BtnSell.Location = new System.Drawing.Point(351, 30);
-            this.BtnSell.Name = "BtnSell";
-            this.BtnSell.Size = new System.Drawing.Size(148, 38);
-            this.BtnSell.TabIndex = 15;
-            this.BtnSell.Text = "Sell";
-            this.BtnSell.UseVisualStyleBackColor = true;
+            this.TxtSum.Location = new System.Drawing.Point(136, 119);
+            this.TxtSum.Name = "TxtSum";
+            this.TxtSum.Size = new System.Drawing.Size(157, 27);
+            this.TxtSum.TabIndex = 14;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(21, 127);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 19);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Sum:";
+            // 
+            // TxtAmount
+            // 
+            this.TxtAmount.Location = new System.Drawing.Point(136, 74);
+            this.TxtAmount.Name = "TxtAmount";
+            this.TxtAmount.Size = new System.Drawing.Size(157, 27);
+            this.TxtAmount.TabIndex = 12;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(21, 82);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(63, 19);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Amount:";
+            // 
+            // TxtExchangeRate
+            // 
+            this.TxtExchangeRate.Location = new System.Drawing.Point(136, 30);
+            this.TxtExchangeRate.Name = "TxtExchangeRate";
+            this.TxtExchangeRate.Size = new System.Drawing.Size(157, 27);
+            this.TxtExchangeRate.TabIndex = 10;
+            // 
+            // BtnEuroBuy
+            // 
+            this.BtnEuroBuy.Location = new System.Drawing.Point(301, 207);
+            this.BtnEuroBuy.Name = "BtnEuroBuy";
+            this.BtnEuroBuy.Size = new System.Drawing.Size(37, 25);
+            this.BtnEuroBuy.TabIndex = 11;
+            this.BtnEuroBuy.Text = "<>";
+            this.BtnEuroBuy.UseVisualStyleBackColor = true;
+            this.BtnEuroBuy.Click += new System.EventHandler(this.BtnEuroBuy_Click);
+            // 
+            // BtnDollarSell
+            // 
+            this.BtnDollarSell.Location = new System.Drawing.Point(301, 82);
+            this.BtnDollarSell.Name = "BtnDollarSell";
+            this.BtnDollarSell.Size = new System.Drawing.Size(37, 25);
+            this.BtnDollarSell.TabIndex = 13;
+            this.BtnDollarSell.Text = "<>";
+            this.BtnDollarSell.UseVisualStyleBackColor = true;
+            this.BtnDollarSell.Click += new System.EventHandler(this.BtnDollarSell_Click);
+            // 
+            // BtnEuroSell
+            // 
+            this.BtnEuroSell.Location = new System.Drawing.Point(301, 255);
+            this.BtnEuroSell.Name = "BtnEuroSell";
+            this.BtnEuroSell.Size = new System.Drawing.Size(37, 27);
+            this.BtnEuroSell.TabIndex = 14;
+            this.BtnEuroSell.Text = "<>";
+            this.BtnEuroSell.UseVisualStyleBackColor = true;
+            this.BtnEuroSell.Click += new System.EventHandler(this.BtnEuroSell_Click);
             // 
             // Form1
             // 
@@ -298,7 +315,7 @@
             this.Controls.Add(this.LblDllrBuy);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exchange Office";
@@ -334,6 +351,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TxtSum;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button BtnSell2;
     }
 }
 
